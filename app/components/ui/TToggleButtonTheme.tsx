@@ -1,23 +1,22 @@
 "use client";
 
-// export default function TToggleButtonTheme() {
-//     const toggle = () => {
-//         document.documentElement.classList.toggle("dark");
-//     };
-
-//     return (
-//         <button onClick={toggle}>
-//             Toggle Theme
-//         </button>
-//     );
-// }
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function TToggleButtonTheme() {
-    const toggle = () => {
-        const root = document.documentElement;
-        const isDark = root.classList.toggle("dark");
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-    };
+    const { theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
 
-    return <button onClick={toggle}>Toggle Theme</button>;
+    useEffect(() => setMounted(true), []);
+
+    if (!mounted) return null;
+
+    return (
+        <button 
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="px-4 py-2 rounded bg-gray-200 dark:bg-gray-800"
+        >
+            {theme === "dark" ? "🌞 Modo Claro" : "🌙 Modo Escuro"}
+        </button>
+    );
 }
