@@ -20,7 +20,6 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // Se está autenticado e tenta acessar login/register
   if (isPublicRoute && token) {
     return NextResponse.redirect(new URL('/dashboard', request.url));
   }
