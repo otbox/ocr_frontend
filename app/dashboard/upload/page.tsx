@@ -17,9 +17,9 @@ export default function UploadPage() {
     if (!selectedFile) return;
 
     // Validar tipo de arquivo
-    const validTypes = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf'];
+    const validTypes = ['image/jpeg', 'image/png', 'image/jpg'];
     if (!validTypes.includes(selectedFile.type)) {
-      setError('Tipo de arquivo inválido. Use JPEG, PNG ou PDF.');
+      setError('Tipo de arquivo inválido. Use JPEG, PNG ou JPG.');
       return;
     }
 
@@ -113,7 +113,7 @@ export default function UploadPage() {
           <input
             ref={fileInputRef}
             type="file"
-            accept="image/jpeg,image/png,image/jpg,application/pdf"
+            accept="image/jpeg,image/png,image/jpg"
             onChange={(e) => handleFileChange(e.target.files?.[0] || null)}
             className="hidden"
           />
@@ -132,7 +132,7 @@ export default function UploadPage() {
                 Selecionar Arquivo
               </button>
               <p className="text-sm text-gray-500 mt-4">
-                Formatos aceitos: JPEG, PNG, PDF • Tamanho máximo: 10MB
+                Formatos aceitos: JPEG, PNG, JPG • Tamanho máximo: 10MB
               </p>
             </>
           ) : (

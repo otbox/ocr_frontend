@@ -50,7 +50,7 @@ export default function LandingPage() {
             </span>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900">
-              Transforme PDFs e imagens em texto editável em poucos segundos.
+              Transforme imagens em texto editável em poucos segundos.
             </h1>
 
             <p className="max-w-xl text-sm sm:text-base text-gray-600">
@@ -77,7 +77,7 @@ export default function LandingPage() {
             <div className="flex flex-wrap gap-4 text-xs text-gray-600">
               <div className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
-                Upload de PDFs e imagens
+                Upload de imagens
               </div>
               <div className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
@@ -112,7 +112,7 @@ export default function LandingPage() {
                 <div className="rounded-xl border border-gray-200 bg-white px-4 py-3">
                   <div className="flex items-center justify-between gap-2">
                     <span className="truncate text-sm font-medium text-gray-900">
-                      contrato-cliente.pdf
+                      contrato-cliente.img
                     </span>
                     <span className="rounded-full bg-emerald-50 px-2 py-1 text-[11px] font-medium text-emerald-700">
                       ✅ Concluído
