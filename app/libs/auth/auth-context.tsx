@@ -1,4 +1,3 @@
-// app/libs/auth/auth-context.tsx
 "use client";
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
@@ -29,7 +28,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Carregar token e usuário do localStorage ao montar
   useEffect(() => {
     const storedToken = localStorage.getItem('token');
     const storedUser = localStorage.getItem('user');
@@ -52,7 +50,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         body: JSON.stringify({ email, password }),
       });
 
-      // Salvar token e usuário
       localStorage.setItem('token', data.accessToken);
       localStorage.setItem('user', JSON.stringify(data.user));
 
@@ -72,7 +69,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         body: JSON.stringify({ email, password, name }),
       });
 
-      // Salvar token e usuário
       localStorage.setItem('token', data.accessToken);
       localStorage.setItem('user', JSON.stringify(data.user));
 

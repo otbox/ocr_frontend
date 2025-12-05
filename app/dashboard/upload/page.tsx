@@ -1,4 +1,3 @@
-// app/(dashboard)/upload/page.tsx
 "use client";
 
 import { useState, useRef } from "react";
@@ -74,7 +73,6 @@ export default function UploadPage() {
 
       const result = await uploadFile('/documents/upload', file);
 
-      // Redirecionar para a página de detalhes
       router.push(`/dashboard/document/${result.id}`);
     } catch (err: any) {
       setError(err.message || 'Erro ao fazer upload');
