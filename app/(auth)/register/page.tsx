@@ -42,7 +42,7 @@ export default function RegisterPage() {
       <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Criar Conta</h1>
-          <p className="text-gray-600 mt-2">Cadastre-se no Paggo OCR</p>
+          <p className="text-gray-600 mt-2">Cadastre-se no OCR</p>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
