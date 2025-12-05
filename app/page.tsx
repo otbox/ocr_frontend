@@ -2,7 +2,6 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import TToggleButtonTheme from "./components/ui/TToggleButtonTheme";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -24,7 +23,6 @@ export default function Home() {
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <TToggleButtonTheme />
       
       {/* Teste 1: CSS inline com lógica JS */}
       <div style={{ 
